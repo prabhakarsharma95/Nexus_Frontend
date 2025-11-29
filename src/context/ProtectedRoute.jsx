@@ -27,6 +27,8 @@ const ProtectedRoute = ({ children, requiredRole }) => {
   if (requiredRole && currentUser.role !== requiredRole) {
     if (currentUser.role === "employer") {
       return <Navigate to="/employer/dashboard" replace />
+    }else {
+      return <Navigate to="/" replace />
     }
     //  else {
     //   return <Navigate to="/dashboard" replace />
